@@ -38,8 +38,8 @@ async def update_status_embed():
         # Create Online Embed Layout
         embed = discord.Embed(color=0x2ecc71)  # Green side bar
 
-        embed.add_field(name="STATUS", value="🟢 `Online`", inline=True)
-        embed.add_field(name="PLAYERS", value=f"`{player_count}/20`", inline=True)
+        embed.add_field(name="Status", value="🟢 `Online`", inline=True)
+        embed.add_field(name="Players", value=f"`{player_count}/20`", inline=True)
         embed.add_field(name="\u200b", value="\u200b", inline=True)  # Spacer for alignment
 
         embed.add_field(
@@ -48,24 +48,24 @@ async def update_status_embed():
             inline=False
         )
 
-        embed.add_field(name="RESTART SCHEDULE", value="`Every 12 Hours`", inline=True)
-        embed.add_field(name="MAX PLAYERS", value="`20 Slots`", inline=True)
+        embed.add_field(name="Restart Schedule", value="`Every 12 Hours`", inline=True)
+        embed.add_field(name="Max Players", value="`20 Slots`", inline=True)
 
     except Exception:
         # Create Offline Embed Layout
         embed = discord.Embed(color=0xe74c3c)  # Red side bar
 
-        embed.add_field(name="STATUS", value="🔴 `Offline`", inline=True)
-        embed.add_field(name="PLAYERS", value="`0/20`", inline=True)
+        embed.add_field(name="Status", value="🔴 `Offline`", inline=True)
+        embed.add_field(name="Players", value="`0/20`", inline=True)
         embed.add_field(name="\u200b", value="\u200b", inline=True)
 
         embed.add_field(
-            name="CONNECT COMMAND", 
+            name="Connect Command", 
             value=f"```connect {RCON_HOST}:9000```", 
             inline=False
         )
 
-        embed.add_field(name="NOTICE", value="`Server is Offline`", inline=True)
+        embed.add_field(name="Notice", value="`Server is Offline`", inline=True)
 
     # Edit existing message or send a new one
     if status_message:
